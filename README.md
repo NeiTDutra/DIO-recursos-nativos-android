@@ -4,5 +4,6 @@ Projeto bootcamp da Digital Innovation One Inc. sobre recursos nativos do androi
 
 ## Utilizando recursos nativos do android
 
-. Calendar
-. Location
+- Calendar
+- Location
+- Contacts

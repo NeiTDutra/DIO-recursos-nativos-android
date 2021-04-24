@@ -8,7 +8,7 @@ Projeto bootcamp da Digital Innovation One Inc. sobre recursos nativos do androi
     
     - Conclusão: é preciso conta google no dispositivo para continuar
 
-- Recursos de localização
+- Recursos de (https://github.com/NeiTDutra/DIO-recursos-nativos-android/tree/main/Contatos)[localização]
 
 - Recursos de contatos
 

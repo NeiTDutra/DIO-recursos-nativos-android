@@ -2,15 +2,20 @@ package com.example.fotos
 
 import android.Manifest
 import android.app.Activity
+import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    var imgUri: Uri? = null
 
     companion object {
         private const val PERMISSION_CODE_PICK = 1000
@@ -106,7 +111,7 @@ class MainActivity : AppCompatActivity() {
             image_view.setImageURI(data?.data)
         }
         if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_TAKE_CODE) {
-            TODO("tratamento de abertura da câmera")
+            image_view.setImageURI(imgUri)
         }
     }
 
@@ -117,6 +122,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun takeImageFromCamera() {
-        TODO("Not yet implemented")
+        val values = ContentValues()
+        values.put(MediaStore.Images.Media.TITLE, "Nova Imagem")
+        values.put(MediaStore.Images.Media.DESCRIPTION, "Imagem capturada da câmera")
+
+        imgUri = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
+        val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imgUri)
+
+        startActivityForResult(cameraIntent, IMAGE_TAKE_CODE)
     }
 }

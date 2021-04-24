@@ -10,11 +10,13 @@
 
     <ImageView
         android:id="@+id/image_view"
-        android:scaleType="centerCrop"
-        android:src="@drawable/imagem_foto_app"
+        android:layout_width="370dp"
+        android:layout_height="370dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:contentDescription="@string/imagem_selecionada"
-        android:layout_width="400dp"
-        android:layout_height="400dp" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagem_foto_app" />
 
     <Button
         android:id="@+id/pick_image"

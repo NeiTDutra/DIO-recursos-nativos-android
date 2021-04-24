@@ -16,7 +16,7 @@ Projeto bootcamp da Digital Innovation One Inc. sobre recursos nativos do androi
 
     - Conclusão: é preciso fotos no dispositivo para exibir
 
-- Recursos de câmera
+- Recursos de [câmera](https://github.com/NeiTDutra/DIO-recursos-nativos-android/tree/main/Fotos)
 
     - Não implementado
 

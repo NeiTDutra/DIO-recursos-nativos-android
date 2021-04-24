@@ -14,7 +14,7 @@ Projeto bootcamp da Digital Innovation One Inc. sobre recursos nativos do androi
 
 - Recursos de [fotos](https://github.com/NeiTDutra/DIO-recursos-nativos-android/tree/main/Fotos)
 
-    - Em curso
+    - Conclusão: é preciso fotos no dispositivo para exibir
 
 - Recursos de câmera
 

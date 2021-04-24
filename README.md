@@ -12,7 +12,7 @@ Projeto bootcamp da Digital Innovation One Inc. sobre recursos nativos do androi
 
     - Conclusão: é preciso lista de contatos para exibir
 
-- Recursos de fotos
+- Recursos de [fotos](https://github.com/NeiTDutra/DIO-recursos-nativos-android/tree/main/Fotos)
 
     - Em curso
 

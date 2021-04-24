@@ -2,4 +2,5 @@
     <string name="app_name">Fotos</string>
     <string name="imagem_selecionada">Imagem selecionada</string>
     <string name="select_image">Selecionar Imagem</string>
+    <string name="open_camera">Abrir Câmera</string>
 </resources>

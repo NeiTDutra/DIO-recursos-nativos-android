@@ -8,10 +8,18 @@ Projeto bootcamp da Digital Innovation One Inc. sobre recursos nativos do androi
     
     - Conclusão: é preciso conta google no dispositivo para continuar
 
-- Recursos de  [localização](https://github.com/NeiTDutra/DIO-recursos-nativos-android/tree/main/Contatos)
-
 - Recursos de [contatos](https://github.com/NeiTDutra/DIO-recursos-nativos-android/tree/main/Contatos)
 
     - Conclusão: é preciso lista de contatos para exibir
 
 - Recursos de fotos
+
+    - Em curso
+
+- Recursos de câmera
+
+    - Não implementado
+
+- Recursos de localização
+
+    - Não implementado

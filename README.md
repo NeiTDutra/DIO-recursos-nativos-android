@@ -18,8 +18,8 @@ Projeto bootcamp da Digital Innovation One Inc. sobre recursos nativos do androi
 
 - Recursos de [câmera](https://github.com/NeiTDutra/DIO-recursos-nativos-android/tree/main/Fotos)
 
-    - Não implementado
+    - Conclusão: testado com câmera do emulador
 
 - Recursos de localização
 
-    - Não implementado
+    - Em desenvolvimento

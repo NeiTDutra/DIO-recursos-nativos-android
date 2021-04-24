@@ -20,6 +20,6 @@ Projeto bootcamp da Digital Innovation One Inc. sobre recursos nativos do androi
 
     - Conclusão: testado com câmera do emulador
 
-- Recursos de localização
+- Recursos de [localização](https://github.com/NeiTDutra/DIO-recursos-nativos-android/tree/main/LocalMap)
 
     - Em desenvolvimento

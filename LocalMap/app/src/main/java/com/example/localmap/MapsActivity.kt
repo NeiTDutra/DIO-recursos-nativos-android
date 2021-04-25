@@ -13,6 +13,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
+import com.google.android.gms.maps.model.MarkerOptions
 
 class MapsActivity :
         AppCompatActivity(),
@@ -56,15 +57,25 @@ class MapsActivity :
             return
         }
         mMap.isMyLocationEnabled = true
+        mMap.mapType = GoogleMap.MAP_TYPE_HYBRID
 
         fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
 
             if (location != null) {
                 lastLocation = location
                 val currentLatLng = LatLng(location.latitude, location.longitude)
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 12.0f))
+                placeMarkerOnMap(currentLatLng)
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 18.0f))
             }
         }
+    }
+
+    private fun placeMarkerOnMap(location: LatLng) {
+        val markerOptions = MarkerOptions().position(location)
+        //markerOptions.icon(BitmapDescriptorFactory.fromBitmap(
+        //        BitmapFactory.decodeResource(resources, R.mipmap.ic_user_location)
+        //))
+        mMap.addMarker(markerOptions)
     }
 
     override fun onMarkerClick(p0: Marker?): Boolean = false

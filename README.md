@@ -24,6 +24,6 @@ Projeto bootcamp da Digital Innovation One Inc. sobre recursos nativos do androi
 
     - Conclusão: concluido
 
-- Recursos de [watch]()
+- Recursos de [watch](https://github.com/NeiTDutra/DIO-recursos-nativos-android/tree/main/Watch)
 
     - Em desenvolvimento

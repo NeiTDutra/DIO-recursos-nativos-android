@@ -22,4 +22,8 @@ Projeto bootcamp da Digital Innovation One Inc. sobre recursos nativos do androi
 
 - Recursos de [localização](https://github.com/NeiTDutra/DIO-recursos-nativos-android/tree/main/LocalMap)
 
+    - Conclusão: concluido
+
+- Recursos de [watch]()
+
     - Em desenvolvimento

@@ -1,6 +1,8 @@
 package com.example.localmap
 
 import android.content.pm.PackageManager
+import android.location.Address
+import android.location.Geocoder
 import android.location.Location
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +16,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import java.util.*
 
 class MapsActivity :
         AppCompatActivity(),
@@ -72,10 +75,30 @@ class MapsActivity :
 
     private fun placeMarkerOnMap(location: LatLng) {
         val markerOptions = MarkerOptions().position(location)
+        val titleStr = getAddress(location)
+
         //markerOptions.icon(BitmapDescriptorFactory.fromBitmap(
         //        BitmapFactory.decodeResource(resources, R.mipmap.ic_user_location)
         //))
+
+        markerOptions.title(titleStr)
         mMap.addMarker(markerOptions)
+    }
+
+    private fun getAddress(latLng: LatLng): String {
+        val geocoder: Geocoder
+        val addresses: List<Address>
+
+        geocoder = Geocoder(this, Locale.getDefault())
+        addresses = geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1)
+
+        val address = addresses[0].getAddressLine(0)
+        val city = addresses[0].locality
+        val state = addresses[0].adminArea
+        val country = addresses[0].countryName
+        val postalCode = addresses[0].postalCode
+
+        return address
     }
 
     override fun onMarkerClick(p0: Marker?): Boolean = false

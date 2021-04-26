@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Watch.iml" filepath="$PROJECT_DIR$/.idea/modules/Watch.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mobile/Watch.mobile.iml" filepath="$PROJECT_DIR$/.idea/modules/mobile/Watch.mobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shared/Watch.shared.iml" filepath="$PROJECT_DIR$/.idea/modules/shared/Watch.shared.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/wear/Watch.wear.iml" filepath="$PROJECT_DIR$/.idea/modules/wear/Watch.wear.iml" />
     </modules>
   </component>

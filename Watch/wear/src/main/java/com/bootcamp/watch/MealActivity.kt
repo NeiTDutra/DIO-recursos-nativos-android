@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import com.example.shared.Meal
 import com.google.android.gms.common.api.GoogleApiClient
+import com.google.android.gms.wearable.PutDataRequest
 import com.google.android.gms.wearable.Wearable
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_meal.*
@@ -17,6 +18,16 @@ class MealActivity : Activity(), GoogleApiClient.ConnectionCallbacks {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_meal)
+
+    client = GoogleApiClient.Builder(this)
+            .addApi(Wearable.API)
+            .addConnectionCallbacks(this)
+            .build()
+    client.connect()
+
+    star.setOnClickListener {
+      sendLike()
+    }
   }
 
   override fun onConnected(p0: Bundle?) {
@@ -24,6 +35,10 @@ class MealActivity : Activity(), GoogleApiClient.ConnectionCallbacks {
       currentMeal = Gson().fromJson(String(messageEvent.data), Meal::class.java)
       updateView()
     }
+  }
+
+  override fun onConnectionSuspended(p0: Int) {
+    Log.w("Wear", "Google API Client connection suspended")
   }
 
   private fun updateView() {
@@ -34,7 +49,10 @@ class MealActivity : Activity(), GoogleApiClient.ConnectionCallbacks {
     }
   }
 
-  override fun onConnectionSuspended(p0: Int) {
-    Log.w("Wear", "Google API Client connection suspended")
+  private fun sendLike() {
+    currentMeal?.let {
+      val bytes = Gson().toJson(it.copy(favorited = true)).toByteArray()
+      Wearable.DataApi.putDataItem(client, PutDataRequest.create("/Liked").setData(bytes))
+    }
   }
 }

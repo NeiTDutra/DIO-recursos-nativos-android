@@ -3,7 +3,7 @@ apply plugin: "kotlin"
 
 dependencies {
     implementation fileTree(dir: 'Libs', include: ['*.jar'])
-    implementation "org.jetbains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 sourceCompatibility = "1.7"

@@ -45,6 +45,11 @@ class MealListActivity : AppCompatActivity(),
   override fun onConnected(p0: Bundle?) {
     Wearable.NodeApi.getConnectedNodes(client).setResultCallback {
       connectNode = it.nodes
+
+      Wearable.DataApi.addListener(client) { data ->
+        val meal = Gson().fromJson(String(data[0].dataItem.data), Meal::class.java)
+        adapter?.updateMeal(meal)
+      }
     }
   }
 

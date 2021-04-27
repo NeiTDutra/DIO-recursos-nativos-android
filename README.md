@@ -26,4 +26,4 @@ Projeto bootcamp da Digital Innovation One Inc. sobre recursos nativos do androi
 
 - Recursos de [watch](https://github.com/NeiTDutra/DIO-recursos-nativos-android/tree/main/Watch)
 
-    - Em desenvolvimento
+    - Conclusão: para testar é preciso instalar o google wear os em um dispositivo físico
